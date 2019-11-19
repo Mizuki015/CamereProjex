@@ -62,6 +62,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // 保存ボタン
     @IBAction func savePhoto(_ sender: UIButton) {
+        
+        // 画面に表示されている画像を取得
+        let displayImage = imageView.image
+        
+        // 画像が空(nil)でない場合
+        // 画像をアルバムに保存する
+        
+        if displayImage != nil {
+            // 画像が空(nil)でない場合
+            // UIImageWriteToSavedPhotosAlbum(アルバムに保存する画像, self, 保存後に実行して欲しいメソッドの名前, nil)
+            UIImageWriteToSavedPhotosAlbum(displayImage!, self, nil, nil)
+        }
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey :Any]) {
