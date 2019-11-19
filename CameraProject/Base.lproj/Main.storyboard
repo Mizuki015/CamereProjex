@@ -15,14 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gwa-oT-pFa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gwa-oT-pFa">
                                 <rect key="frame" x="20" y="44" width="374" height="408"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2a-tb-4GW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2a-tb-4GW">
                                 <rect key="frame" x="20" y="484" width="172" height="198"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="8xO-hI-sEG"/>
+                                    <constraint firstAttribute="width" constant="172" id="vtc-nu-1Xu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="カメラ">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -31,9 +33,8 @@
                                     <action selector="runCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Sx-rs-Tdm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NE-aG-Xb0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NE-aG-Xb0">
                                 <rect key="frame" x="222" y="484" width="172" height="198"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="アルバム">
@@ -43,10 +44,12 @@
                                     <action selector="runAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S3W-6S-1dU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbg-cN-B1V">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbg-cN-B1V">
                                 <rect key="frame" x="20" y="726" width="374" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="w92-mx-Ykp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="保存">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -57,6 +60,21 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="M2a-tb-4GW" firstAttribute="top" secondItem="gwa-oT-pFa" secondAttribute="bottom" constant="32" id="BoO-Ns-alJ"/>
+                            <constraint firstItem="M2a-tb-4GW" firstAttribute="top" secondItem="7NE-aG-Xb0" secondAttribute="top" id="JMb-54-3E4"/>
+                            <constraint firstItem="gwa-oT-pFa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Sni-ys-lgI"/>
+                            <constraint firstItem="gwa-oT-pFa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WnF-7i-PIL"/>
+                            <constraint firstItem="gwa-oT-pFa" firstAttribute="trailing" secondItem="7NE-aG-Xb0" secondAttribute="trailing" id="kQm-LK-R2q"/>
+                            <constraint firstItem="7NE-aG-Xb0" firstAttribute="trailing" secondItem="Bbg-cN-B1V" secondAttribute="trailing" id="kmf-2X-q55"/>
+                            <constraint firstItem="7NE-aG-Xb0" firstAttribute="leading" secondItem="M2a-tb-4GW" secondAttribute="trailing" constant="30" id="lpH-Y0-O6q"/>
+                            <constraint firstItem="gwa-oT-pFa" firstAttribute="leading" secondItem="M2a-tb-4GW" secondAttribute="leading" id="oRv-nI-xlc"/>
+                            <constraint firstItem="gwa-oT-pFa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rs0-aZ-c53"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bbg-cN-B1V" secondAttribute="bottom" constant="55" id="tBh-5F-gf9"/>
+                            <constraint firstItem="M2a-tb-4GW" firstAttribute="baseline" secondItem="7NE-aG-Xb0" secondAttribute="firstBaseline" id="xRC-1h-a8y"/>
+                            <constraint firstItem="M2a-tb-4GW" firstAttribute="leading" secondItem="Bbg-cN-B1V" secondAttribute="leading" id="yMJ-BQ-YdD"/>
+                            <constraint firstItem="Bbg-cN-B1V" firstAttribute="top" secondItem="M2a-tb-4GW" secondAttribute="bottom" constant="44" id="yds-93-ho6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
